@@ -4,7 +4,22 @@
 
 ## Codex와 Claude Code에 설치
 
-`gh skill`을 지원하는 [GitHub CLI](https://cli.github.com/)가 필요합니다. 사용할 앱에 해당하는 명령을 실행하면 해당 PC의 사용자 범위에 설치됩니다.
+### GitHub 링크로 설치
+
+로컬 Codex나 Claude Code에 아래처럼 요청하면 됩니다. 공개 ZIP을 내려받아 설치할 수 있어 GitHub CLI나 Git이 없어도 됩니다.
+
+> https://github.com/unono915/animated-web-deck 에서 animated-web-deck 스킬을 이 PC의 사용자 범위에 설치해 줘. 릴리스 ZIP의 `skills/animated-web-deck` 폴더를 참조 문서까지 통째로 설치하고, 설치 경로를 알려 줘.
+
+직접 설치하려면 [최신 릴리스](https://github.com/unono915/animated-web-deck/releases/latest)에서 **Source code (zip)**을 받아 압축을 풉니다. 그 안의 `skills/animated-web-deck` 폴더를 아래 위치에 복사합니다. `~`는 내 사용자 홈 폴더입니다.
+
+| 앱 | 복사 후 `SKILL.md` 위치 |
+|---|---|
+| Codex | `~/.agents/skills/animated-web-deck/SKILL.md` |
+| Claude Code | `~/.claude/skills/animated-web-deck/SKILL.md` |
+
+### GitHub CLI로 설치
+
+`gh skill`을 지원하는 [GitHub CLI](https://cli.github.com/)가 설치되어 있으면 아래 명령도 사용할 수 있습니다.
 
 **Codex**
 
@@ -18,7 +33,9 @@ gh skill install unono915/animated-web-deck animated-web-deck --agent codex --sc
 gh skill install unono915/animated-web-deck animated-web-deck --agent claude-code --scope user
 ```
 
-새 세션을 열고 Codex에서는 `$animated-web-deck`, Claude Code에서는 `/animated-web-deck`으로 불러옵니다. 설치한 버전은 `gh skill list`로 확인하고, 새 버전이 나오면 `gh skill update animated-web-deck`으로 갱신합니다.
+GitHub CLI로 설치한 버전은 `gh skill list`로 확인하고, 새 버전이 나오면 `gh skill update animated-web-deck`으로 갱신합니다.
+
+설치 후 새 세션을 열고 Codex에서는 `$animated-web-deck`, Claude Code에서는 `/animated-web-deck`으로 불러옵니다.
 
 ## 사용 예시
 
